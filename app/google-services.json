@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042576743072",
+    "project_id": "music-recognition-47672",
+    "storage_bucket": "music-recognition-47672.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042576743072:android:f8b0cbe614cf76d14007c5",
+        "android_client_info": {
+          "package_name": "com.adrianlopez.music_recognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042576743072-71l79vf41o70fk2app4nkglibl3nhl1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG71QpNiLwNnSWKIPj9bYFCh7jok69KYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042576743072-71l79vf41o70fk2app4nkglibl3nhl1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

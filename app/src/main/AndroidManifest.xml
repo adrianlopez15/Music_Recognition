@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Music_Recognition">
+        android:theme="@style/Theme.Music_Recognition"
+        android:name="com.adrianlopez.music_recognition.MusicRecognitionApplication" >
         <activity
-            android:name=".activities.UserAuthActivity"
+            android:name="com.adrianlopez.music_recognition.activities.UserAuthActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
