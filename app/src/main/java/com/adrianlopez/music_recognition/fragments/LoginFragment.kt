@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.adrianlopez.music_recognition.databinding.LoginFragmentBinding
 import com.adrianlopez.music_recognition.viewmodels.LoginViewModel
@@ -34,11 +35,14 @@ class LoginFragment : Fragment() {
 
         initListeners()
 
-        lifecycleScope.launchWhenStarted {
-            viewModel.isLoginEnabled.collect { isLoginEnabled ->
-                binding.loginButton.isEnabled = isLoginEnabled
-            }
+        val nameObserver = Observer<Boolean> { isValid ->
+            // Update the UI, in this case, a TextView.
+            binding.loginButton.isEnabled  = isValid
         }
+
+        // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+        viewModel.isLoginEnabled.observe(viewLifecycleOwner, nameObserver)
+
     }
 
     /**Initializes listeners for email and password inputs */
