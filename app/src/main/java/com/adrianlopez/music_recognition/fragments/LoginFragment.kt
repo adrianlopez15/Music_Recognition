@@ -8,11 +8,11 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
+import com.adrianlopez.music_recognition.R
 import com.adrianlopez.music_recognition.databinding.LoginFragmentBinding
 import com.adrianlopez.music_recognition.viewmodels.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -49,6 +49,9 @@ class LoginFragment : Fragment() {
     private fun initListeners() {
         binding.emailInputEditText.addTextChangedListener { viewModel.emailTextChanged(it.toString()) }
         binding.passwordInputEditText.addTextChangedListener { viewModel.passwordTextChanged(it.toString()) }
+        binding.signupTextView.setOnClickListener { view ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
     }
 
 }

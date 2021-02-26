@@ -2,5 +2,6 @@
     <string name="app_name">Music_Recognition</string>
     <string name="email_input">Enter Email</string>
     <string name="password_input">Enter Password</string>
+    <string name="create_account">Not a member? <u>Create Account</u></string>
     <string name="login_action">Login</string>
 </resources>
