@@ -17,7 +17,7 @@ class LoginViewModel : ViewModel() {
     val isLoginEnabled : LiveData<Boolean> by lazy {
         combine(_email, _password) { email, password ->
             val isEmailValid = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-            val isPasswordValid = password.length >= 8
+            val isPasswordValid = password.length > 7
 
             isEmailValid and isPasswordValid
         }.flowOn(Dispatchers.Default).asLiveData()
