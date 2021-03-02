@@ -5,4 +5,8 @@
     <string name="create_account">Not a member? <u>Create Account</u></string>
     <string name="login_action">Login</string>
     <string name="app_logo_description">Music Recognition</string>
+    <string name="username_input"> Enter user name</string>
+    <string name="new_password_input"> Enter new password</string>
+    <string name="confirm_password"> Confirm password</string>
+    <string name="sign_up_action">Sign up</string>
 </resources>
